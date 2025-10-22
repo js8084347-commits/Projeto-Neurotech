@@ -4,7 +4,38 @@
   font-weight: 135;
   font-style: regular;
 }
-
+ #fraseImpacto {
+    font-family: "Alike Angular", serif;
+    font-weight: 135;
+    font-style: regular;
+    font-size: 48px;
+    color: white;
+    background-color: rgb(24, 23, 23);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+ #Noticia_cibersegurança {
+    font-family: "Alike Angular", serif;
+    font-weight: 135;
+    font-style: regular;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.linha_de_fundo_frase {
+    font-family: "Alike Angular", serif;
+    font-weight: 135;
+    font-style: regular;
+    font-size: 48px;
+    color: white;
+    background-color: rgb(24, 23, 23);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 *{
     margin: 0;

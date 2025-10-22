@@ -5,6 +5,7 @@
   font-style: regular;
 }
 
+
 *{
     margin: 0;
     padding: 0;
@@ -109,4 +110,19 @@ nav a:hover { /* tamanho da palavra assim que passar o mouse ma palavra*/
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+.page {
+  display: none;
+  padding: 50px 60px;
+}
+
+.page.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 

@@ -1,0 +1,165 @@
+@charset "utf-8";
+.alike-angular-regular {
+  font-family: "Alike Angular", serif;
+  font-weight: 135;
+  font-style: regular;
+}
+ #fraseImpacto {
+    font-family: "Alike Angular", serif;
+    font-weight: 135;
+    font-style: regular;
+    font-size: 48px;
+    color: white;
+    background-color: rgb(24, 23, 23);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+ #Noticia_cibersegurança {
+    font-family: "Alike Angular", serif;
+    font-weight: 135;
+    font-style: regular;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.linha_de_fundo_frase {
+    font-family: "Alike Angular", serif;
+    font-weight: 135;
+    font-style: regular;
+    font-size: 48px;
+    color: white;
+    background-color: rgb(24, 23, 23);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.banner {
+    width: 100%;
+    min-height: 100vh;
+    background:  
+        linear-gradient(135deg, rgba(0, 0, 0, 100), rgba(32, 32, 32, 100) 100%);
+        background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    z-index: 2;
+    width: 100%;
+    font-size: 30px;
+}
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav { /*espaçamento da barra de menu*/
+    display: flex;
+    gap: 50px;
+}
+nav a { /*estilo de cores da barra de menu*/
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    
+}
+
+nav a::after { /*prepara a animação da linha embaixo das palavras*/
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(208, 208, 211);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after { /*animação da linha embaixo das palavras*/
+    width: 100%;
+}
+
+nav a:hover { /* tamanho da palavra assim que passar o mouse ma palavra*/
+    font-size: 35px;
+}
+
+.content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.description {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background: rgb(51, 51, 51, 100%);
+    color: rgb(255, 255, 255);
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.page {
+  display: none;
+  padding: 50px 60px;
+}
+
+.page.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}

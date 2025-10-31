@@ -1,4 +1,12 @@
-@charset "utf-8";
+@charset "utf-8"; 
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Alike Angular', serif;
+  background: linear-gradient(135deg, rgba(24, 22, 22, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%);
+  color: #ffffff;
+}
 .alike-angular-regular {
   font-family: "Alike Angular", serif;
   font-weight: 135;
@@ -162,4 +170,214 @@ nav a:hover { /* tamanho da palavra assim que passar o mouse ma palavra*/
 h2 {
   font-size: 36px;
   margin-bottom: 20px;
+}
+
+/* NOVOS ESTILOS PARA A SEÇÃO DE DEPOIMENTOS */
+.testimonials-section {
+    padding: 80px 0; 
+    background: linear-gradient(135deg, rgba(24, 22, 22, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%);
+    color: #ffffff; 
+ }
+.testimonials-section .container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+.testimonials-section-title {
+    font-size: 3em; 
+    font-weight: 700; 
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.testimonials-section-subtitle {
+    font-size: 1.1em;
+    color: #cccccc; 
+    margin-bottom: 50px; 
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Contêiner do Carrossel */
+.carousel-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Esconde o conteúdo que transborda horizontalmente */
+    position: relative;
+    padding-bottom: 20px; 
+}
+
+.testimonial-cards-wrapper {
+    display: flex;
+    gap: 30px;
+    padding: 20px; 
+    scroll-snap-type: x mandatory; /* Habilita o "snap" de rolagem para os cartões */
+    -webkit-overflow-scrolling: touch; /* Suaviza a rolagem em dispositivos iOS */
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    justify-content: flex-start; /* Alinha os cartões ao início para a rolagem */
+
+    -ms-overflow-style: none;  /* Esconder para IE e Edge (legado) */
+    scrollbar-width: none;  /* Esconder para Firefox */
+}
+
+
+/* Cartão de Depoimento Individual */
+.testimonial-card {
+    background-color: #2b2b2b;  /* cinza escuro neutro */; 
+    border-radius: 15px; 
+    padding: 30px;
+    text-align: left;
+    flex-shrink: 0; /* Impede que o cartão encolha */
+    width: calc((100% / 3) - 20px); /* Calcula a largura para 3 cartões com espaçamento */
+    max-width: 380px; 
+    box-sizing: border-box; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    scroll-snap-align: center; /* Ponto de "snap" para cada cartão (centraliza ao rolar) */
+}
+
+/* Cabeçalho do Cartão (Avatar, Nome, Estrelas) */
+.testimonial-card .card-header { /* Especifica para evitar conflito com card-header de outras seções, se houver */
+    display: flex;
+    align-items: center; 
+    margin-bottom: 20px;
+}
+
+.testimonial-card .avatar {
+    width: 50px;
+    height: 60px;
+    border-radius: 80%; 
+    margin-right: 15px;
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    border: 2px solid #5d5e75; 
+}
+
+.testimonial-card .user-name {
+    font-size: 1.2em;
+    font-weight: 600; 
+    margin: 0;
+    color: #ffffff;
+}
+
+.testimonial-card .user-handle {
+    font-size: 0.9em;
+    color: #a0a0b8; 
+    margin: 0;
+}
+
+.testimonial-card .stars {
+    display: flex;
+    font-size: 1.3em; 
+    margin-left: auto; 
+    gap: 3px;
+}
+
+.testimonial-card .star {
+    color: #8a8af8; 
+}
+
+.testimonial-card .star.empty {
+    color: #5d5e75;  
+}
+
+.testimonial-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #cccccc; 
+}
+
+/* Paginação do Carrossel (Pontos) */
+.carousel-pagination {
+    display: flex;
+    justify-content: center; 
+    margin-top: 50px;
+    gap: 10px; 
+}
+
+.carousel-pagination .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; 
+    background-color: #5d5e75; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.carousel-pagination .dot.active {
+    background-color: #ffffff; 
+    
+}
+.testimonial-card .star {
+    color: #8a8af8; 
+}
+
+.testimonial-card .star.empty {
+    color: #5d5e75; 
+}
+
+.testimonial-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #cccccc; 
+}
+
+/* Paginação do Carrossel (Pontos) */
+.carousel-pagination {
+    display: flex;
+    justify-content: center; 
+    margin-top: 50px;
+    gap: 10px; 
+}
+
+.carousel-pagination .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; 
+    background-color: #5d5e75; /* Cor dos pontos inativos */
+    cursor: pointer; /* Indica que são clicáveis (para JS) */
+    transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.carousel-pagination .dot.active {
+    background-color: #ffffff; 
+}
+
+/* Responsividade da Seção de Depoimentos */
+@media (max-width: 1200px) {
+    .testimonial-card {
+        width: calc(50% - 20px); /* Em telas médias (tablets), mostra 2 cartões por vez */
+        max-width: 500px; /* Permite que os cartões sejam um pouco mais largos */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-section-title {
+        font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
+    }
+    .testimonials-section-subtitle {
+        font-size: 1em; /* Reduz o tamanho do subtítulo */
+    }
+    .testimonial-card {
+        width: calc(100% - 40px); /* Em telas pequenas (celulares), mostra 1 cartão por vez */
+        max-width: 450px; /* Largura máxima para garantir que não fiquem muito grandes */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-section-title {
+        font-size: 2em;
+    }
+    .testimonials-section {
+        padding: 50px 0; /* Reduz o padding da seção */
+    }
+    .testimonial-card {
+        width: calc(100% - 30px); /* Ajusta a largura para telas muito pequenas */
+    }
+    .carousel-pagination {
+        margin-top: 30px; /* Reduz o espaçamento da paginação */
+    }
 }

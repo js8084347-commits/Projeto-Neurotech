@@ -4,154 +4,160 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Alike Angular', serif;
-  background: linear-gradient(135deg, rgba(24, 22, 22, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%);
+  background: linear-gradient(135deg, #202020 0%, #000000 100%);
   color: #ffffff;
 }
+
 .alike-angular-regular {
   font-family: "Alike Angular", serif;
   font-weight: 135;
   font-style: regular;
 }
- #fraseImpacto {
-    font-family: "Alike Angular", serif;
-    font-weight: 135;
-    font-style: regular;
-    font-size: 48px;
-    color: white;
-    background-color: rgb(24, 23, 23);
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+#fraseImpacto {
+  font-family: "Alike Angular", serif;
+  font-weight: 135;
+  font-style: regular;
+  font-size: 48px;
+  color: white;
+  background-color: rgb(24, 23, 23);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
- #Noticia_cibersegurança {
-    font-family: "Alike Angular", serif;
-    font-weight: 135;
-    font-style: regular;
-    font-size: 48px;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+#Noticia_cibersegurança {
+  font-family: "Alike Angular", serif;
+  font-weight: 135;
+  font-style: regular;
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
 .linha_de_fundo_frase {
-    font-family: "Alike Angular", serif;
-    font-weight: 135;
-    font-style: regular;
-    font-size: 48px;
-    color: white;
-    background-color: rgb(24, 23, 23);
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  font-family: "Alike Angular", serif;
+  font-weight: 135;
+  font-style: regular;
+  font-size: 48px;
+  color: white;
+  background-color: rgb(24, 23, 23);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 .banner {
-    width: 100%;
-    min-height: 100vh;
-    background:  
-        linear-gradient(135deg, rgba(0, 0, 0, 100), rgba(32, 32, 32, 100) 100%);
-        background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #202020 0%, #000000 100%);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-    z-index: 2;
-    width: 100%;
-    font-size: 30px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  z-index: 2;
+  width: 100%;
+  font-size: 30px;
 }
+
 .logo {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 1px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-nav { /*espaçamento da barra de menu*/
-    display: flex;
-    gap: 50px;
-}
-nav a { /*estilo de cores da barra de menu*/
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    position: relative;
-    padding: 5px 0;
-    
+nav {
+  display: flex;
+  gap: 50px;
 }
 
-nav a::after { /*prepara a animação da linha embaixo das palavras*/
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: rgb(208, 208, 211);
-    transition: width 0.3s ease;
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
 }
 
-nav a:hover::after { /*animação da linha embaixo das palavras*/
-    width: 100%;
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(208, 208, 211);
+  transition: width 0.3s ease;
 }
 
-nav a:hover { /* tamanho da palavra assim que passar o mouse ma palavra*/
-    font-size: 35px;
+nav a:hover::after {
+  width: 100%;
 }
 
-.content{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    z-index: 2;
+nav a:hover {
+  font-size: 35px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 2;
 }
 
 .main-title {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 .description {
-    max-width: 600px;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 40px;
-    opacity: 0.9;
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.9;
 }
 
 .cta-button {
-    display: inline-block;
-    background: rgb(51, 51, 51, 100%);
-    color: rgb(255, 255, 255);
-    padding: 14px 32px;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  background: rgb(51, 51, 51, 100%);
+  color: rgb(255, 255, 255);
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
 .page {
   display: none;
   padding: 50px 60px;
@@ -172,212 +178,166 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* NOVOS ESTILOS PARA A SEÇÃO DE DEPOIMENTOS */
+/* SEÇÃO DE DEPOIMENTOS */
 .testimonials-section {
-    padding: 80px 0; 
-    background: linear-gradient(135deg, rgba(24, 22, 22, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%);
-    color: #ffffff; 
- }
-.testimonials-section .container { 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px; 
-    text-align: center; 
+  padding: 80px 0; 
+  background: linear-gradient(135deg, #202020 0%, #000000 100%);
+  color: #ffffff; 
 }
 
-.testimonials-section-title {
-    font-size: 3em; 
-    font-weight: 700; 
-    margin-bottom: 10px;
-    color: #ffffff;
-    font-family: 'Poppins', Arial, sans-serif;
+.testimonials-section .container { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  text-align: center; 
 }
 
 .testimonials-section-subtitle {
-    font-size: 1.1em;
-    color: #cccccc; 
-    margin-bottom: 50px; 
-    max-width: 800px; 
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Poppins', Arial, sans-serif;
+  font-size: 25px; 
+  font-weight: 700; 
+  margin-top: -70px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
-/* Contêiner do Carrossel */
+
+
 .carousel-container {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden; /* Esconde o conteúdo que transborda horizontalmente */
-    position: relative;
-    padding-bottom: 20px; 
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px; 
 }
 
 .testimonial-cards-wrapper {
-    display: flex;
-    gap: 30px;
-    padding: 20px; 
-    scroll-snap-type: x mandatory; /* Habilita o "snap" de rolagem para os cartões */
-    -webkit-overflow-scrolling: touch; /* Suaviza a rolagem em dispositivos iOS */
-    overflow-x: auto; /* Permite a rolagem horizontal */
-    justify-content: flex-start; /* Alinha os cartões ao início para a rolagem */
-
-    -ms-overflow-style: none;  /* Esconder para IE e Edge (legado) */
-    scrollbar-width: none;  /* Esconder para Firefox */
+  display: flex;
+  gap: 30px;
+  padding: 20px; 
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  justify-content: flex-start;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-
-/* Cartão de Depoimento Individual */
 .testimonial-card {
-    background-color: #2b2b2b;  /* cinza escuro neutro */; 
-    border-radius: 15px; 
-    padding: 30px;
-    text-align: left;
-    flex-shrink: 0; /* Impede que o cartão encolha */
-    width: calc((100% / 3) - 20px); /* Calcula a largura para 3 cartões com espaçamento */
-    max-width: 380px; 
-    box-sizing: border-box; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-    scroll-snap-align: center; /* Ponto de "snap" para cada cartão (centraliza ao rolar) */
+  background-color: #3a3a3a;
+  border-radius: 15px; 
+  padding: 30px;
+  text-align: left;
+  flex-shrink: 0;
+  width: calc((100% / 3) - 20px);
+  max-width: 380px; 
+  box-sizing: border-box; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  scroll-snap-align: center;
 }
 
-/* Cabeçalho do Cartão (Avatar, Nome, Estrelas) */
-.testimonial-card .card-header { /* Especifica para evitar conflito com card-header de outras seções, se houver */
-    display: flex;
-    align-items: center; 
-    margin-bottom: 20px;
+.testimonial-card .card-header {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 20px;
 }
 
 .testimonial-card .avatar {
-    width: 50px;
-    height: 60px;
-    border-radius: 80%; 
-    margin-right: 15px;
-    object-fit: cover; /* Garante que a imagem preencha o círculo */
-    border: 2px solid #5d5e75; 
+  width: 50px;
+  height: 60px;
+  border-radius: 80%; 
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid #5d5e75; 
 }
 
 .testimonial-card .user-name {
-    font-size: 1.2em;
-    font-weight: 600; 
-    margin: 0;
-    color: #ffffff;
+  font-size: 1.2em;
+  font-weight: 600; 
+  margin: 0;
+  color: #ffffff;
 }
 
 .testimonial-card .user-handle {
-    font-size: 0.9em;
-    color: #a0a0b8; 
-    margin: 0;
+  font-size: 0.9em;
+  color: #a0a0b8; 
+  margin: 0;
 }
 
 .testimonial-card .stars {
-    display: flex;
-    font-size: 1.3em; 
-    margin-left: auto; 
-    gap: 3px;
+  display: flex;
+  font-size: 1.3em; 
+  margin-left: auto; 
+  gap: 3px;
 }
 
 .testimonial-card .star {
-    color: #8a8af8; 
+  color: #8a8af8; 
 }
 
 .testimonial-card .star.empty {
-    color: #5d5e75;  
+  color: #5d5e75;  
 }
 
 .testimonial-text {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #cccccc; 
+  font-size: 1em;
+  line-height: 1.6;
+  color: #cccccc; 
 }
 
-/* Paginação do Carrossel (Pontos) */
+/* Paginação do Carrossel */
 .carousel-pagination {
-    display: flex;
-    justify-content: center; 
-    margin-top: 50px;
-    gap: 10px; 
+  display: flex;
+  justify-content: center; 
+  margin-top: 50px;
+  gap: 10px; 
 }
 
 .carousel-pagination .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%; 
-    background-color: #5d5e75; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; 
+  background-color: #5d5e75; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
 }
 
 .carousel-pagination .dot.active {
-    background-color: #ffffff; 
-    
-}
-.testimonial-card .star {
-    color: #8a8af8; 
+  background-color: #ffffff; 
 }
 
-.testimonial-card .star.empty {
-    color: #5d5e75; 
-}
-
-.testimonial-text {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #cccccc; 
-}
-
-/* Paginação do Carrossel (Pontos) */
-.carousel-pagination {
-    display: flex;
-    justify-content: center; 
-    margin-top: 50px;
-    gap: 10px; 
-}
-
-.carousel-pagination .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%; 
-    background-color: #5d5e75; /* Cor dos pontos inativos */
-    cursor: pointer; /* Indica que são clicáveis (para JS) */
-    transition: background-color 0.3s ease; /* Transição suave de cor */
-}
-
-.carousel-pagination .dot.active {
-    background-color: #ffffff; 
-}
-
-/* Responsividade da Seção de Depoimentos */
+/* Responsividade */
 @media (max-width: 1200px) {
-    .testimonial-card {
-        width: calc(50% - 20px); /* Em telas médias (tablets), mostra 2 cartões por vez */
-        max-width: 500px; /* Permite que os cartões sejam um pouco mais largos */
-    }
+  .testimonial-card {
+    width: calc(50% - 20px);
+    max-width: 500px;
+  }
 }
 
 @media (max-width: 768px) {
-    .testimonials-section-title {
-        font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
-    }
-    .testimonials-section-subtitle {
-        font-size: 1em; /* Reduz o tamanho do subtítulo */
-    }
-    .testimonial-card {
-        width: calc(100% - 40px); /* Em telas pequenas (celulares), mostra 1 cartão por vez */
-        max-width: 450px; /* Largura máxima para garantir que não fiquem muito grandes */
-    }
+  .testimonials-section-title {
+    font-size: 2.5em;
+  }
+  .testimonials-section-subtitle {
+    font-size: 1em;
+  }
+  .testimonial-card {
+    width: calc(100% - 40px);
+    max-width: 450px;
+  }
 }
 
 @media (max-width: 480px) {
-    .testimonials-section-title {
-        font-size: 2em;
-    }
-    .testimonials-section {
-        padding: 50px 0; /* Reduz o padding da seção */
-    }
-    .testimonial-card {
-        width: calc(100% - 30px); /* Ajusta a largura para telas muito pequenas */
-    }
-    .carousel-pagination {
-        margin-top: 30px; /* Reduz o espaçamento da paginação */
-    }
+  .testimonials-section-title {
+    font-size: 2em;
+  }
+  .testimonials-section {
+    padding: 50px 0;
+  }
+  .testimonial-card {
+    width: calc(100% - 30px);
+  }
+  .carousel-pagination {
+    margin-top: 30px;
+  }
 }

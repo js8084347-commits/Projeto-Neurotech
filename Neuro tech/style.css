@@ -297,33 +297,33 @@ h2 {
   width: 12px;
   height: 12px;
   border-radius: 50%; 
-  background-color: #5d5e75; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
+  background-color: #5d5e75; /* Cor dos pontos inativos */
+  cursor: pointer; /* Indica que são clicáveis (para JS) */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
 }
 
 .carousel-pagination .dot.active {
   background-color: #ffffff; 
 }
 
-/* Responsividade */
+/* Responsividade da seção de Depoimentos */
 @media (max-width: 1200px) {
   .testimonial-card {
-    width: calc(50% - 20px);
-    max-width: 500px;
+    width: calc(50% - 20px); /* Em telas médias (tablets), mostra 2 cartões por vez */
+    max-width: 500px; /* Permite que os cartões sejam um pouco mais largos */
   }
 }
 
 @media (max-width: 768px) {
   .testimonials-section-title {
-    font-size: 2.5em;
+    font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
   }
   .testimonials-section-subtitle {
-    font-size: 1em;
+    font-size: 1em;/* Reduz o tamanho do subtítulo */
   }
   .testimonial-card {
-    width: calc(100% - 40px);
-    max-width: 450px;
+    width: calc(100% - 40px);/* Em telas pequenas (celulares), mostra 1 cartão por vez */
+    max-width: 450px;/* Largura máxima para garantir que não fiquem muito grandes */
   }
 }
 
@@ -332,12 +332,215 @@ h2 {
     font-size: 2em;
   }
   .testimonials-section {
-    padding: 50px 0;
+    padding: 50px 0; /* Reduz o padding da seção */
   }
   .testimonial-card {
-    width: calc(100% - 30px);
+    width: calc(100% - 30px);/* Ajusta a largura para telas muito pequenas */
   }
   .carousel-pagination {
-    margin-top: 30px;
+    margin-top: 30px;/* Reduz o espaçamento da paginação */
   }
 }
+
+/*ESTILOS DO FOOTER*/
+.footer {
+  background-color: #000000; /*Cor de fundo: Preto */
+  color: #ffffff; /*Cor do texto: Branco */
+  padding: 80px 20px; /*Espaçamento interno */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;/*Permite que os itens quebrem linha em telas menores */
+  justify-content: space-between;/*Espaçamento entre os itens */
+  gap: 40px; /*Espaçamento entre os itens */
+}
+
+.footer-column {
+  flex: 1; /*Cada coluna ocupa espaço igual */
+  min-width: 200px; /*Largura mínima para responsividade */
+}
+
+/* Coluna da Marca (Logo e redes social)*/
+.brand-column {
+  flex: 1.2; /* Dar um pouco mais de espaço para a coluna da marca */
+  min-width: 250px;
+}
+
+.footer-logo {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #111111; /* Cor de preto mais clara para dar destque a logo*/
+  color: #ffffff;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.social-icons:hover {
+  background-color: #111111; /* Cor de destaque ao passar o mouse */
+  transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Titulo das colunas do footer*/
+ .footer-heading {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ffffff;
+  position: relative;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px; /* Espaçamento abaixo do título */
+  width: 50px; /* Comprimento da linha */
+  height: 3px;
+  background-color: #cccccc; /* Linha decorativa abaixo do título */
+  border-radius: 2px;
+}
+
+/*LISTA DE LINKS E CONTATOS*/
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 12px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #cccccc; /* Cor de destaque ao passar o mouse */
+}
+
+.footer-contact li {
+  color: #ffffff;
+}
+
+/* Coluna de Newsletter */
+.newsletter-column {
+  min-width: 250px; /* Pode precisar de mais largura por causa do formulario*/
+}
+
+.newsletter-description {
+  font-size: 0.95em;
+  color: #ffffff;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.newsletter-form {
+  display: flex;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #000000; /* Fundo do input */
+}
+
+.newsletter-form input[type="email"] {
+  flex-grow: 1; /* Faz o input ocupar o máximo de espaço */
+  padding: 12px 20px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.95em;
+  outline: none;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: #ffffff; /* Cor do placeholder */
+}
+
+.newsletter-form button[type="submit"] {
+  background-color: #cccccc;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 30px 30px 30px 30px; /* Apenas o lado direito arredondado */
+  transition: background-color 0.3s ease;
+  display: flex; /* Para centralizar o ícone */
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-form button[type="submit"]:hover {
+  background-color: #aaaaaa; /* Cor de destaque ao passar o mouse */
+}
+
+/* Responsividade do Footer */
+@media (max-width: 992px) {
+  .footer-column {
+    flex: 1 1 calc(50% - 20px); /* Duas colunas por linha em telas médias */
+    min-width: unset; /*Remove largura mínima para melhor ajuste */
+  }
+  .brand-column {
+    flex: 1 1 100%; /* Marca ocupa toda a linha em telas médias */
+    text-align: center;
+  }
+  .brand-column .footer-logo {
+    margin-bottom: 10px;
+  }
+  .brand-column .social-icons {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a linha decorativa */
+  }
+  }
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;/* Uma coluna por linha em telas pequenas */
+      align-items: center;/* Centraliza as colunas */
+    }
+    .footer-column {
+      width: 100%; /* Cada coluna ocupa toda a largura */
+      max-width: 400px; /* Limita a largura máxima para melhor leitura */
+      text-align: center;/* Centraliza o texto */
+    }
+    .brand-column .social-icons {
+      margin-bottom: 40px;/* Mais espaço após ícones sociais */
+    }
+    .footer-heading{
+      margin-top: 30px; /* Espaçamento superior para títulos */
+    }
+    .newsletter-form {
+      max-width: 350px; /* Limita a largura do formulário */
+      margin: 0 auto; /* Centraliza o formulário */
+    }
+  }

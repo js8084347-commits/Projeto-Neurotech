@@ -185,33 +185,61 @@ nav a:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-#sobrenos {
-  font-family: "Alike Angular", serif;
-  font-weight: 135;
-  font-style: regular;
-  font-size: 48px;
-  color: white;
+
+
+
+/* =========================
+   SEÇÃO SOBRE NÓS
+========================= */
+
+/* ======== SEÇÃO SOBRE NÓS (IMAGEM AO LADO DO TEXTO) ======== */
+
+#sobrenos{
+  font-size: 70px;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+}
+.sobrenos-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #descriçãosobrenos {
-  font-family: "Alike Angular", serif;
-  font-weight: 135;
-  font-style: regular;
-  font-size: 30px;
-  color: white;
-  text-align: left;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-left: 30px;
+  flex: 1;
+  text-align: justify;
+  font-size: 28px;
+  line-height: 1.5;
+  padding-left: 0;
+  margin: 0;
 }
 
-#imgsobrenos{
+#imgsobrenos {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
   text-align: right;
-  padding-right: 30px;
-  width: 1000px;
+  padding-right: 0;
+}
+
+@media (max-width: 900px) {
+  .sobrenos-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  #imgsobrenos {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  #descriçãosobrenos {
+    text-align: center;
+  }
 }
 
 

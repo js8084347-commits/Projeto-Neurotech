@@ -186,63 +186,170 @@ nav a:hover {
 }
 
 
+/* SEÇÃO DAS NOTICIAS */
+#Noticia{
+  text-align: center;
+   font-size: 70px;
+}
 
+.subtitulo{
+  text-align: center;
+  font-size: 25px;
+}
 
-/* =========================
-   SEÇÃO SOBRE NÓS
-========================= */
+.testimonials-sectionn {
+  padding: 80px 0;
 
-/* ======== SEÇÃO SOBRE NÓS (IMAGEM AO LADO DO TEXTO) ======== */
+  color: #ffffff;
+}
 
-#sobrenos{
-  font-size: 70px;
+.testimonials-sectionn .containern {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-.sobrenos-container {
+.testimonial-cards-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 50px;
-  max-width: 1200px;
+  gap: 30px;
+  padding: 20px; 
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  justify-content: flex-start;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.testimonial-card {  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-paginationn {
+  display: flex;
+  justify-content: center; 
+  margin-top: 50px;
+  gap: 10px; 
+}
+
+.carousel-paginationn .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; 
+  background-color: #5d5e75; /* Cor dos pontos inativos */
+  cursor: pointer; /* Indica que são clicáveis (para JS) */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.carousel-paginationn .dot.active {
+  background-color: #ffffff; 
+}
+
+
+.carousel-container {
+  width: 100%;
   margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
 }
 
-#descriçãosobrenos {
-  flex: 1;
-  text-align: justify;
-  font-size: 28px;
-  line-height: 1.5;
-  padding-left: 0;
-  margin: 0;
+.testimonial-card-wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  justify-content: flex-start;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-#imgsobrenos {
-  flex: 1;
-  max-width: 100%;
-  height: auto;
-  text-align: right;
-  padding-right: 0;
+.testimonial-card {
+  background-color: #3a3a3a;
+  border-radius: 15px; 
+  padding: 30px;
+  text-align: left;
+  flex-shrink: 0;
+  width: calc((100% / 3) - 20px);
+  max-width: 380px; 
+  box-sizing: border-box; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  scroll-snap-align: center;
 }
 
-@media (max-width: 900px) {
-  .sobrenos-container {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px;
+.testimonial-card .card-header {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+/* Paginação do Carrossel das noticias */
+.carousel-paginationvd {
+  display: flex;
+  justify-content: center; 
+  margin-top: 50px;
+  gap: 10px; 
+}
+
+.carousel-paginationvd .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; 
+  background-color: #5d5e75; /* Cor dos pontos inativos */
+  cursor: pointer; /* Indica que são clicáveis (para JS) */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.carousel-paginationvd .dot.active {
+  background-color: #ffffff; 
+}
+
+
+/* Responsividade da seção de Depoimentos */
+@media (max-width: 1200px) {
+  .testimonial-card {
+    width: calc(50% - 20px); /* Em telas médias (tablets), mostra 2 cartões por vez */
+    max-width: 500px; /* Permite que os cartões sejam um pouco mais largos */
   }
+}
 
-  #imgsobrenos {
-    width: 90%;
-    margin-top: 20px;
+@media (max-width: 768px) {
+  .testimonials-section-title {
+    font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
   }
-
-  #descriçãosobrenos {
-    text-align: center;
+  .testimonials-section-subtitle {
+    font-size: 1em;/* Reduz o tamanho do subtítulo */
+  }
+  .testimonial-card {
+    width: calc(100% - 40px);/* Em telas pequenas (celulares), mostra 1 cartão por vez */
+    max-width: 450px;/* Largura máxima para garantir que não fiquem muito grandes */
   }
 }
 
+@media (max-width: 480px) {
+  .testimonials-section-title {
+    font-size: 2em;
+  }
+  .testimonials-section {
+    padding: 50px 0; /* Reduz o padding da seção */
+  }
+  .testimonial-card {
+    width: calc(100% - 30px);/* Ajusta a largura para telas muito pequenas */
+  }
+  .carousel-pagination {
+    margin-top: 30px;/* Reduz o espaçamento da paginação */
+  }
+}
+
+/* FIM DA SEÇÃO DAS NOTICIAS */
 
 /* INICIO DO FOOTER*/
 

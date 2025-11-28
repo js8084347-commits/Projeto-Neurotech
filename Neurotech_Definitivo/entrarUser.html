@@ -41,37 +41,61 @@
             </nav>
         </header>
 
-        <!-- CONTAINER CENTRALIZADO -->
-        <div class="container">
-            <h2>Conecte-se a Neurotech!</h2>
-
-            <form id="meuFormulario">
-                <div class="campo-grupo">
-                    <label for="email"></label>
-                    <h3>Email:</h3>
-                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
-                    <span class="mensagem-erro" id="emailErro"></span>
+        <body>
+            <div class="page-content-center">
+            <div class="login-container">
+        <div class="logo">NeuroTech</div>
+        <h2 class="login-title">Faça login em sua conta!</h2>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <div class="input-with-icon">
+                    <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
                 </div>
-
-                <div class="campo-grupo senha-group">
-                    <label for="senhaLogin"></label>
-                    <h3>Senha:</h3>
-                    <input type="password" id="senhaLogin" name="senhaLogin" required>
-
-                    <!-- Botão de mostrar/ocultar senha -->
-                    <span id="toggleSenha" class="toggle-senha">
-                        👁
-                    </span>
-
-                    <span class="mensagem-erro" id="senhaErro"></span>
+                <div class="error-message" id="emailError">Por favor, insira um e-mail válido</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <div class="input-with-icon">
+                    <input type="password" id="password" class="form-control" placeholder="Sua senha" required>
                 </div>
-
-
-                <button type="submit">Entrar</button>
-                <p class="status-entrada" id="statusentrada"></p>
-            </form>
+                <div class="error-message" id="passwordError">A senha deve ter pelo menos 6 caracteres</div>
+            </div>
+            
+            <button type="submit" class="login-button">Entrar</button>
+            <div class="success-message" id="loginSuccess">Login realizado com sucesso!</div>
+        </form>
+        
+        <div class="login-links">
+            <a href="#" id="forgotPassword">Esqueci minha senha</a>
+            <a href="#" id="rememberMe">
+                <input type="checkbox" id="rememberCheckbox">
+                <label for="rememberCheckbox">Lembrar-me</label>
+            </a>
         </div>
-
+        
+        <div class="divider">
+            <span>Ou continue com</span>
+        </div>
+        
+        <div class="social-login">
+            <div class="social-button">
+                <i class="fab fa-google"></i>
+            </div>
+            <div class="social-button">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="social-button">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+        
+        <div class="signup-link">
+            Não tem uma conta? <a href="#" id="signupLink">Cadastre-se!</a>
+        </div>
+    </div>
     </div>
 
     <!-- FOOTER -->

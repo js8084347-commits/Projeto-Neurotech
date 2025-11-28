@@ -1,93 +1,90 @@
-document.addEventListener('DOMContentLoaded', () => {
-
-    const formulario = document.getElementById('meuFormulario');
-    const inputEmail = document.getElementById('email');
-    const inputSenha = document.getElementById('senha');
-    const erroEmail = document.getElementById('emailErro');
-    const statusLogin = document.getElementById('statusentrada');
-
-    // Lista de e-mails válidos (exemplo para simulação)
-    const emailsRegistrados = [
-        "teste@gmail.com",
-        "usuario@neurotech.com",
-        "admin@gmail.com"
-    ];
-
-    // Mostrar erro SOMENTE no e-mail
-    function mostrarErroEmail(mensagem) {
-        erroEmail.textContent = mensagem;
-        inputEmail.classList.add('invalido');
-        inputEmail.classList.remove('valido');
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+    const loginSuccess = document.getElementById('loginSuccess');
+    const forgotPassword = document.getElementById('forgotPassword');
+    const signupLink = document.getElementById('signupLink');
+    
+    // Função para validar e-mail
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
     }
-
-    // Limpar erro do e-mail
-    function limparErroEmail() {
-        erroEmail.textContent = '';
-        inputEmail.classList.remove('invalido');
-        inputEmail.classList.add('valido');
+    
+    // Função para validar senha
+    function validatePassword(password) {
+        return password.length >= 6;
     }
-
-    // Validação do e-mail
-    function validarEmail() {
-        const email = inputEmail.value.trim();
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (email === '') {
-            mostrarErroEmail('Por favor, preencha o e-mail.');
-            return false;
+    
+    // Validação em tempo real
+    emailInput.addEventListener('input', function() {
+        if (validateEmail(emailInput.value)) {
+            emailError.style.display = 'none';
+            emailInput.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        } else {
+            emailError.style.display = 'block';
+            emailInput.style.borderColor = '#ff6b6b';
         }
-
-        if (!regex.test(email)) {
-            mostrarErroEmail('Insira um e-mail válido.');
-            return false;
-        }
-
-        limparErroEmail();
-        return true;
-    }
-
-    // Validação em tempo real (somente e-mail)
-    inputEmail.addEventListener('input', validarEmail);
-
-    // Envio do formulário
-    formulario.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const emailOk = validarEmail();
-
-        // Senha NÃO tem validação — apenas pega o valor
-        const senha = inputSenha.value;
-
-        if (!emailOk) {
-            statusLogin.textContent = 'Corrija o e-mail antes de continuar.';
-            statusLogin.classList.add('erro');
-            statusLogin.classList.remove('sucesso');
-            return;
-        }
-
-        // Verificar se o e-mail existe
-        if (!emailsRegistrados.includes(inputEmail.value.trim())) {
-            statusLogin.textContent = 'E-mail não encontrado. Verifique e tente novamente.';
-            statusLogin.classList.add('erro');
-            statusLogin.classList.remove('sucesso');
-            return;
-        }
-
-        // Login bem-sucedido
-        statusLogin.textContent = 'Login realizado com sucesso!';
-        statusLogin.classList.add('sucesso');
-        statusLogin.classList.remove('erro');
     });
-
-});
-
-const senhaInput = document.getElementById('senhaLogin');
-const toggleSenha = document.getElementById('toggleSenha');
-
-toggleSenha.addEventListener('click', () => {
-    const tipo = senhaInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    senhaInput.setAttribute('type', tipo);
-
-    // Alterna o ícone
-    toggleSenha.textContent = tipo === 'password' ? '👁' : '︶';
+    
+    passwordInput.addEventListener('input', function() {
+        if (validatePassword(passwordInput.value)) {
+            passwordError.style.display = 'none';
+            passwordInput.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        } else {
+            passwordError.style.display = 'block';
+            passwordInput.style.borderColor = '#ff6b6b';
+        }
+    });
+    
+    // Envio do formulário
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const emailValid = validateEmail(emailInput.value);
+        const passwordValid = validatePassword(passwordInput.value);
+        
+        if (emailValid && passwordValid) {
+            // Simulação de login bem-sucedido
+            loginSuccess.style.display = 'block';
+            emailError.style.display = 'none';
+            passwordError.style.display = 'none';
+            
+            // Aqui você normalmente enviaria os dados para o servidor
+            console.log('Login realizado:', {
+                email: emailInput.value,
+                password: passwordInput.value
+            });
+            
+            // Redirecionar após um breve delay (simulação)
+            setTimeout(function() {
+                alert('Login realizado com sucesso! Redirecionando...');
+            }, 1000);
+        } else {
+            if (!emailValid) {
+                emailError.style.display = 'block';
+                emailInput.style.borderColor = '#ff6b6b';
+            }
+            if (!passwordValid) {
+                passwordError.style.display = 'block';
+                passwordInput.style.borderColor = '#ff6b6b';
+            }
+        }
+    });
+    
+    // Link "Esqueci minha senha"
+    forgotPassword.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Funcionalidade de recuperação de senha será implementada em breve!');
+    });
+    
+    // Link "Cadastre-se"
+    signupLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Redirecionando para página de cadastro...');
+        // window.location.href = 'signup.html'; // Descomente para redirecionar
+    });
 });

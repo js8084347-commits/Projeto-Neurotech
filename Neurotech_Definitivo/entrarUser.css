@@ -1,4 +1,10 @@
 @charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 body {
   margin: 0;
@@ -34,18 +40,14 @@ body {
 }
 
 /* Botão do menu hamburguer */
-/* Botão do menu hambúrguer — fixo no canto superior direito DO SITE */
 .menu-toggle {
-  display: none; /* aparece só no mobile */
-  font-size: 35px;
+  display: none;
+  font-size: 30px;
   cursor: pointer;
   color: #fff;
-
-  position: fixed;   /* <-- muda para FIXED */
-  top: 20px;
-  right: 20px;
-
-  z-index: 3000; /* fica acima de tudo */
+  position: relative;
+  z-index: 2001;
+  /* sempre acima do menu */
 }
 
 /* Ícone hambúrguer por padrão */
@@ -189,179 +191,226 @@ nav a:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.container {
-    background-color: #444343;
-    padding: 30px;
-    margin-top: 70px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.login-container {
     width: 100%;
-    max-width: 400px;
-}
-
-.banner {
-    min-height: calc(100vh - 150px); /* altura total menos o footer */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-h2 {
+    max-width: 450px;
+    padding: 40px 30px;
+    background-color: rgba(70, 68, 75, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     text-align: center;
-    color: #e2e2e2;
-    margin-bottom: 25px;
+    align-items: center;
 }
 
-h3{
-    text-align: left;
-    color: #e2e2e2;
-    margin-bottom: 10px;
+
+.page-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* subtrai a altura do header */
+    padding-top: 40px; /* evita colar no menu */
 }
 
-.campo-grupo {
+.logo {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.login-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form-group {
     margin-bottom: 20px;
+    text-align: left;
 }
 
-label {
-    display: block; /* Faz a label ficar em uma linha separada */
+.form-group label {
+    display: block;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1em;
-}
-
-.senha-group {
+.input-with-icon {
     position: relative;
 }
 
-.toggle-senha {
+.input-with-icon i {
     position: absolute;
-    right: 20px;
-    top: 33px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #555;
-    user-select: none;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0a0b8;
 }
 
-.toggle-senha:hover {
-    color: #000;
-}
-
-
-
-/* Estilo para quando o campo está inválido */
-input.invalido {
-    border-color: #dc3545; /* Borda vermelha */
-    background-color: #f8d7da; /* Fundo levemente avermelhado */
-}
-
-/* Estilo para quando o campo está válido */
-input.valido {
-    border-color: #28a745; /* Borda verde */
-    background-color: #d4edda; /* Fundo levemente esverdeado */
-}
-
-.mensagem-erro {
-    color: #dc3545; /* Texto da mensagem de erro vermelho */
-    font-size: 0.85em;
-    margin-top: 5px;
-    display: block; /* Garante que a mensagem apareça em uma nova linha */
-    min-height: 1.2em; /* Reserva um espaço para a mensagem, mesmo que vazia, para evitar "pulinhos" no layout */
-}
-
-
-
-#statuslogin.sucesso {
-    color: #28a745;
-}
-
-#statuslogin.erro {
-    color: #dc3545;
-}
-
-
-
-
-button[type="submit"] {
+.form-control {
     width: 100%;
-    padding: 12px;
-    background-color: #595d61;
+    padding: 12px 15px 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #4a3eef;
+    box-shadow: 0 0 0 2px rgba(74, 62, 239, 0.3);
+}
+
+.form-control::placeholder {
+    color: #a0a0b8;
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #797981;
     color: white;
     border: none;
-    border-radius: 4px;
-    font-size: 1.1em;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Animação suave ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
 }
 
-button[type="submit"]:hover {
-    background-color: #4c4f52;;
+.login-button:hover {
+    background-color: #6a6a72;
+    transform: translateY(-2px);
 }
 
-.status-formulario {
-    text-align: center;
+.login-links {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
-    font-weight: bold;
+    font-size: 14px;
 }
 
-/* Classes para mensagens de status */
-.status-formulario.sucesso {
-    color: #28a745;
+.login-links a {
+    color: #a0a0b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-.status-formulario.erro {
-    color: #dc3545;
+
+.login-links a:hover {
+    color: white;
+}
+
+#rememberMe {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#rememberCheckbox {
+    margin: 0;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.divider span {
+    padding: 0 10px;
+    color: #a0a0b8;
+    font-size: 14px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.signup-link {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #a0a0b8;
+}
+
+.signup-link a {
+    color: #dfdfdf;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #ffffff;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.success-message {
+    color: #51cf66;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+@media (max-width: 480px) { 
+    .login-container {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    .logo {
+        font-size: 32px;
+    }
+    
+    .login-title {
+        font-size: 24px;
+    }
+    
+    .login-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 }
 
 
-/* Responsividade da seção de Depoimentos */
-@media (max-width: 1200px) {
-  .testimonial-card {
-    width: calc(50% - 20px); /* Em telas médias (tablets), mostra 2 cartões por vez */
-    max-width: 500px; /* Permite que os cartões sejam um pouco mais largos */
-  }
-}
-
-@media (max-width: 768px) {
-  .testimonials-section-title {
-    font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
-  }
-  .testimonials-section-subtitle {
-    font-size: 1em;/* Reduz o tamanho do subtítulo */
-  }
-  .testimonial-card {
-    width: calc(100% - 40px);/* Em telas pequenas (celulares), mostra 1 cartão por vez */
-    max-width: 450px;/* Largura máxima para garantir que não fiquem muito grandes */
-  }
-}
-
-@media (max-width: 480px) {
-  .testimonials-section-title {
-    font-size: 2em;
-  }
-  .testimonials-section {
-    padding: 50px 0; /* Reduz o padding da seção */
-  }
-  .testimonial-card {
-    width: calc(100% - 30px);/* Ajusta a largura para telas muito pequenas */
-  }
-  .carousel-pagination {
-    margin-top: 30px;/* Reduz o espaçamento da paginação */
-  }
-}
-
-/* FIM DA SEÇÃO DAS NOTICIAS */
 
 /* INICIO DO FOOTER*/
 
@@ -603,6 +652,3 @@ button[type="submit"]:hover {
   }
 
   /* FIM DO FOOTER*/
-
-
-

@@ -1,0 +1,883 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Alike Angular', serif;
+  background: linear-gradient(to bottom, #2b2b2b 0%, #000000 100%);
+  color: #ffffff;
+}
+
+.alike-angular-regular {
+  font-family: "Alike Angular", serif;
+  font-weight: 135;
+  font-style: regular;
+}
+
+/* =========================
+   MENU HEADER HAMBURGUER
+========================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  background-color: #292929; /* Caso fique com cor diferente use uma destas cores #2b2b2b, #222222, #292929  */
+  /*Cor do Menu*/
+  position: relative;
+  z-index: 100;
+}
+
+/* Esconde checkbox */
+.menu-checkbox {
+  display: none;
+}
+
+/* Botão do menu hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  z-index: 2001;
+  /* sempre acima do menu */
+}
+
+/* Ícone hambúrguer por padrão */
+.menu-toggle i::before {
+  content: "\f0c9";
+  /* ícone hambúrguer Font Awesome */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+/* Menu desktop */
+.menu {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  font-size: 30px;
+}
+
+/* =========================
+     MENU MOBILE RESPONSIVO
+  ========================= */
+@media (max-width: 850px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    padding-top: 120px;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2000;
+    /* acima de tudo */
+  }
+
+  /* Menu aberto */
+  .menu-checkbox:checked~.menu {
+    transform: translateX(0);
+  }
+
+  /* Ícone X quando aberto */
+  .menu-checkbox:checked+.menu-toggle i::before {
+    content: "\f00d";
+    /* ícone X Font Awesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+
+  .menu a {
+    color: #fff;
+    font-size: 40px;
+    padding: 10px 15px;
+    z-index: 2001;
+    /* garante que links sejam clicáveis */
+    text-decoration: none;
+  }
+
+  .header-right .user span {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 40px;
+  }
+
+  .header-right .user span a {
+    font-size: 40px;
+  }
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 50px;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(208, 208, 211);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  font-size: 35px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.cta-button {
+  display: inline-block;
+  background: rgb(51, 51, 51, 100%);
+  color: rgb(255, 255, 255);
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#fraseImpacto {
+  font-family: "Alike Angular", serif;
+  font-weight: 135;
+  font-style: regular;
+  font-size: 60px;
+  color: white;
+  background-color: rgb(24, 23, 23);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.titulo-noticias {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 65px; /* empurra tudo pra baixo */
+}
+
+.img-boca {
+    position: absolute;
+    left: 30%; /* começa no centro */
+    transform: translateX(-150%) translateY(-30%); /*Y sendo pra cima e X para os lados */
+    top: 50%;
+    width: 200px; /* ajuste o tamanho */
+    height: auto;
+}
+
+/* Esse é o título centralizado */
+#Noticia_cibersegurança {
+  font-family: "Alike Angular", serif;
+  font-weight: 135;
+  font-style: regular;
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+#linha_de_fundo_frase1 {
+  font-family: "Alike Angular", serif;
+  font-weight: 135;
+  font-style: regular;
+  font-size: 60px;
+  color: white;
+  background-color: rgb(24, 23, 23);
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-right: 30px;
+}
+
+/* SEÇÃO DAS NOTICIAS E CIBERSEGURANÇA */
+.testimonials-sectionnc {
+  padding: 80px 0;
+
+  color: #ffffff;
+}
+
+.testimonials-section .containernc {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.testimonial-card {  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-cards-wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 20px; 
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  justify-content: flex-start;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.carousel-paginationnc {
+  display: flex;
+  justify-content: center; 
+  margin-top: 50px;
+  gap: 10px; 
+}
+
+.carousel-paginationnc .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; 
+  background-color: #5d5e75; /* Cor dos pontos inativos */
+  cursor: pointer; /* Indica que são clicáveis (para JS) */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.carousel-paginationnc .dot.active {
+  background-color: #ffffff; 
+}
+
+
+
+/* SEÇÃO DOS VIDEOS */
+.testimonials-sectionvd {
+  padding: 80px 0;
+
+  color: #ffffff;
+}
+
+.testimonials-section .containervd {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.testimonial-card-wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  justify-content: flex-start;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.testimonial-card {
+  background-color: #3a3a3a;
+  border-radius: 15px; 
+  padding: 30px;
+  text-align: left;
+  flex-shrink: 0;
+  width: calc((100% / 3) - 20px);
+  max-width: 380px; 
+  box-sizing: border-box; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  scroll-snap-align: center;
+}
+
+.testimonial-card .card-header {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+/* Paginação do Carrossel dos Videos */
+.carousel-paginationvd {
+  display: flex;
+  justify-content: center; 
+  margin-top: 50px;
+  gap: 10px; 
+}
+
+.carousel-paginationvd .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; 
+  background-color: #5d5e75; /* Cor dos pontos inativos */
+  cursor: pointer; /* Indica que são clicáveis (para JS) */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.carousel-paginationvd .dot.active {
+  background-color: #ffffff; 
+}
+
+/* FIM DOS VIDEOS */
+
+#linha_de_fundo_frase2 {
+  font-family: "Alike Angular", serif;
+  font-weight: 135;
+  font-style: regular;
+  font-size: 60px;
+  color: white;
+  background-color: rgb(24, 23, 23);
+  text-align: left;
+  padding-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  }
+
+/* INICIO DO CARTÕES DE FICHA TECNICAS E OFERTAS */
+.testimonials-sectionfto {
+  padding: 80px 0;
+
+  color: #ffffff;
+}
+
+.testimonials-section .containerfto {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.testimonial-card-wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  justify-content: flex-start;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.testimonial-card {
+  background-color: #3a3a3a;
+  border-radius: 15px; 
+  padding: 30px;
+  text-align: left;
+  flex-shrink: 0;
+  width: calc((100% / 3) - 20px);
+  max-width: 380px; 
+  box-sizing: border-box; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  scroll-snap-align: center;
+}
+
+.testimonial-card .card-header {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+/* Paginação do Carrossel dos Videos */
+.carousel-paginationfto {
+  display: flex;
+  justify-content: center; 
+  margin-top: 50px;
+  gap: 10px; 
+}
+
+.carousel-paginationvd .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; 
+  background-color: #5d5e75; /* Cor dos pontos inativos */
+  cursor: pointer; /* Indica que são clicáveis (para JS) */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.carousel-paginationvd .dot.active {
+  background-color: #ffffff; 
+}
+
+/* FIM DAS FICHAS TECNICAS E OFERTAS */
+
+#linha_de_fundo_frase3 {
+  font-family: "Alike Angular", serif;
+  font-weight: 135;
+  font-style: regular;
+  font-size: 60px;
+  color: white;
+  background-color: rgb(17, 16, 16); /* Caso fique muito escuro, coloque está cor 24, 23, 23*/
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* INICIO DA PARTE DOS DEPOIMENTOS */
+.testimonials-section {
+  padding: 80px 0; 
+  
+  color: #ffffff; 
+}
+
+.testimonials-section .container { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  text-align: center; 
+}
+
+.testimonials-section-subtitle {
+  font-size: 35px; 
+  font-weight: 700; 
+  margin-top: -70px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+
+.carousel-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px; 
+}
+
+.testimonial-cards-wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 20px; 
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  justify-content: flex-start;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.testimonial-card {
+  background-color: #3a3a3a;
+  border-radius: 15px; 
+  padding: 30px;
+  text-align: left;
+  flex-shrink: 0;
+  width: calc((100% / 3) - 20px);
+  max-width: 380px; 
+  box-sizing: border-box; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  scroll-snap-align: center;
+}
+
+.testimonial-card .card-header {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.testimonial-card .avatar {
+  width: 50px;
+  height: 60px;
+  border-radius: 80%; 
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid #5d5e75; 
+}
+
+.testimonial-card .user-name {
+  font-size: 1.2em;
+  font-weight: 600; 
+  margin: 0;
+  color: #ffffff;
+}
+
+.testimonial-card .user-handle {
+  font-size: 0.9em;
+  color: #a0a0b8; 
+  margin: 0;
+}
+
+.testimonial-card .stars {
+  display: flex;
+  font-size: 1.3em; 
+  margin-left: auto; 
+  gap: 3px;
+}
+
+.testimonial-card .star {
+  color: #8a8af8; 
+}
+
+.testimonial-card .star.empty {
+  color: #5d5e75;  
+}
+
+.testimonial-text {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #cccccc; 
+}
+
+/* Paginação do Carrossel */
+.carousel-pagination {
+  display: flex;
+  justify-content: center; 
+  margin-top: 50px;
+  gap: 10px; 
+}
+
+.carousel-pagination .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; 
+  background-color: #5d5e75; /* Cor dos pontos inativos */
+  cursor: pointer; /* Indica que são clicáveis (para JS) */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.carousel-pagination .dot.active {
+  background-color: #ffffff; 
+}
+
+/* Responsividade da seção de Depoimentos */
+@media (max-width: 1200px) {
+  .testimonial-card {
+    width: calc(50% - 20px); /* Em telas médias (tablets), mostra 2 cartões por vez */
+    max-width: 500px; /* Permite que os cartões sejam um pouco mais largos */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section-title {
+    font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
+  }
+  .testimonials-section-subtitle {
+    font-size: 1em;/* Reduz o tamanho do subtítulo */
+  }
+  .testimonial-card {
+    width: calc(100% - 40px);/* Em telas pequenas (celulares), mostra 1 cartão por vez */
+    max-width: 450px;/* Largura máxima para garantir que não fiquem muito grandes */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section-title {
+    font-size: 2em;
+  }
+  .testimonials-section {
+    padding: 50px 0; /* Reduz o padding da seção */
+  }
+  .testimonial-card {
+    width: calc(100% - 30px);/* Ajusta a largura para telas muito pequenas */
+  }
+  .carousel-pagination {
+    margin-top: 30px;/* Reduz o espaçamento da paginação */
+  }
+}
+
+/* INICIO DO FOOTER*/
+
+.footer {
+  color: #ffffff; /*Cor do texto: Branco */
+  padding: 80px 20px; /*Espaçamento interno */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;/*Permite que os itens quebrem linha em telas menores */
+  justify-content: space-between;/*Espaçamento entre os itens */
+  gap: 40px; /*Espaçamento entre os itens */
+}
+
+.footer-column {
+  flex: 1; /*Cada coluna ocupa espaço igual */
+  min-width: 200px; /*Largura mínima para responsividade */
+}
+
+/* Coluna da Marca (Logo e redes social)*/
+.brand-column {
+  flex: 1.2; /* Dar um pouco mais de espaço para a coluna da marca */
+  min-width: 250px;
+}
+
+.footer-logo {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* estiliza os ícones individuais */
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #111111;
+  color: #ffffff;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #222222;
+  transform: translateY(-3px);
+}
+
+/* Titulo das colunas do footer*/
+ .footer-heading {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ffffff;
+  position: relative;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px; /* Espaçamento abaixo do título */
+  width: 50px; /* Comprimento da linha */
+  height: 3px;
+  background-color: #cccccc; /* Linha decorativa abaixo do título */
+  border-radius: 2px;
+}
+
+/*LISTA DE LINKS E CONTATOS*/
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 12px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #cccccc; /* Cor de destaque ao passar o mouse */
+}
+
+.footer-contact li {
+  color: #ffffff;
+}
+
+/* Coluna de Newsletter */
+.newsletter-column {
+  min-width: 250px; /* Pode precisar de mais largura por causa do formulario*/
+}
+
+.newsletter-description {
+  font-size: 0.95em;
+  color: #ffffff;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.newsletter-form {
+  display: flex;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #000000; /* Fundo do input */
+  margin-top: 20px;
+}
+
+.newsletter-form input[type="email"] {
+  flex-grow: 1; /* Faz o input ocupar o máximo de espaço */
+  padding: 10px 10px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 0.95em;
+  outline: none;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: #ffffff; /* Cor do placeholder */
+}
+
+.newsletter-form button[type="submit"] {
+  background-color: #cccccc;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 30px; /* Apenas o lado direito arredondado */
+  transition: background-color 0.3s ease;
+  display: flex; /* Para centralizar o ícone */
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-form button[type="submit"]:hover {
+  background-color: #aaaaaa; /* Cor de destaque ao passar o mouse */
+}
+
+/* Responsividade do Footer */
+/* FOOTER PRINCIPAL */
+.footer {
+  color: #ffffff;
+  padding: 60px 20px 30px 20px; /* diminui a parte inferior */
+}
+
+/* ÁREA INFERIOR (COPYRIGHT) */
+.footer-bottom {
+  text-align: center;
+  padding: 8px 0; /* antes era 15px, agora mais compacto */
+  border-top: 1px solid #111;
+  margin-top: 10px; /* reduz espaço entre o conteúdo e a faixa inferior */
+}
+
+.copyright {
+  color: #aaa;
+  font-size: 0.9em;
+  margin: 0;
+}
+@media (max-width: 992px) {
+  .footer-column {
+    flex: 1 1 calc(50% - 20px); /* Duas colunas por linha em telas médias */
+    min-width: unset; /*Remove largura mínima para melhor ajuste */
+    
+  }
+  .brand-column {
+    flex: 1 1 100%; /* Marca ocupa toda a linha em telas médias */
+    text-align: center;
+  }
+  .brand-column .footer-logo {
+    margin-bottom: 10px;
+  }
+  .brand-column .social-icons {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a linha decorativa */
+  }
+  }
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;/* Uma coluna por linha em telas pequenas */
+      align-items: center;/* Centraliza as colunas */
+    }
+    .footer-column {
+      width: 100%; /* Cada coluna ocupa toda a largura */
+      max-width: 400px; /* Limita a largura máxima para melhor leitura */
+      text-align: center;/* Centraliza o texto */
+    }
+    .brand-column .social-icons {
+      margin-bottom: 40px;/* Mais espaço após ícones sociais */
+    }
+    .footer-heading{
+      margin-top: 30px; /* Espaçamento superior para títulos */
+    }
+    .newsletter-form {
+      max-width: 350px; /* Limita a largura do formulário */
+      margin: 0 auto; /* Centraliza o formulário */
+    }
+  }
+  
+
+  .footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #111; /* linha discreta separando */
+  }
+  
+  .copyright {
+    color: #aaa;
+    font-size: 0.9em;
+    margin: 0;
+  }
+
+  /* FIM DO FOOTER*/
+
+  
+
+
+

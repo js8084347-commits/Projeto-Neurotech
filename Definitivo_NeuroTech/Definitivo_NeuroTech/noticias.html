@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>NeuroTech</title>
+    <link rel="shortcut icon" href="logo_site-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="noticias.css">
+</head>
+
+<body>
+    <div class="banner">
+        <header class="header">
+            <a href="index.html"><img src="logo_site-removebg-preview.png" alt="logo NeuroTech" width="130px"></a>
+
+            <!-- Checkbox escondido para controlar o menu -->
+            <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+
+            <!-- Botão do menu hamburguer -->
+            <label for="menu-checkbox" class="menu-toggle" aria-label="Abrir menu">
+                <i></i>
+            </label>
+            <!-- Menu de navegação -->
+            <nav class="menu">
+                <a href="sobrenos.html">Sobre Nós</a>
+                <a href="noticias.html">Notícia</a>
+                <a href="videos.html">Vídeos</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="fichatecnica.html">Ficha Técnica</a>
+                <a href="cibersegurança.html">Cibersegurança</a>
+                <a href="oferta.html">Ofertas</a>
+                <div class="header-right">
+                    <div class="user">
+                        <span>
+                            <img src="iconuser.png" alt="Ícone de usuário" width="20px">
+                            <a href="#">Bem-vindo(a)</a> ou <a href="#">Cadastre-se</a>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <!-- PARTE DAS NOTICIAS E CIBERSEGURANÇA-->
+        <h1 id="Noticia"> Noticias</h1>
+        <h2 class="subtitulo">Fique por dentro de todas as novidades junto conosco!</h2>
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="carousel-container">
+
+                    <!-- SETA ESQUERDA -->
+                    <button class="carousel-arrow left-arrow" aria-label="Anterior">
+                        &#10094;
+                    </button>
+                    <div class="testimonial-cards-wrapper">
+
+                        <!-- Cartão de Depoimento 1 -->
+                        <div class="testimonial-card">
+                            <img src="cybercrime.jpg" width="300">
+                            <p>
+                                <a
+                                    href="https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/08/28/crimes-virtuais-rn-veja-casos-e-saiba-como-se-prevenir.ghtml">
+                                    Crimes virtuais crescem 165% no RN; veja casos e saiba como se prevenir</a>
+                            </p>
+                        </div>
+
+                        <!-- Cartão de Depoimento 2 -->
+                        <div class="testimonial-card">
+                            <img src="cybercrime.jpg" width="300">
+                            <p>
+                                <a
+                                    href="https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/08/28/crimes-virtuais-rn-veja-casos-e-saiba-como-se-prevenir.ghtml">
+                                    Crimes virtuais crescem 165% no RN; veja casos e saiba como se prevenir</a>
+                            </p>
+                        </div>
+
+                        <!-- Cartão de Depoimento 3 -->
+                        <div class="testimonial-card">
+                            <img src="cybercrime.jpg" width="300">
+                            <p>
+                                <a
+                                    href="https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/08/28/crimes-virtuais-rn-veja-casos-e-saiba-como-se-prevenir.ghtml">
+                                    Crimes virtuais crescem 165% no RN; veja casos e saiba como se prevenir</a>
+                            </p>
+                        </div>
+
+                        <!-- Mais alguns cartões para demonstrar a rolagem do carrossel -->
+                        <div class="testimonial-card">
+                            <img src="cybercrime.jpg" width="300">
+                            <p>
+                                <a
+                                    href="https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/08/28/crimes-virtuais-rn-veja-casos-e-saiba-como-se-prevenir.ghtml">
+                                    Crimes virtuais crescem 165% no RN; veja casos e saiba como se prevenir</a>
+                            </p>
+                        </div>
+
+
+                        <div class="testimonial-card">
+                            <img src="cybercrime.jpg" width="300">
+                            <p>
+                                <a
+                                    href="https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/08/28/crimes-virtuais-rn-veja-casos-e-saiba-como-se-prevenir.ghtml">
+                                    Crimes virtuais crescem 165% no RN; veja casos e saiba como se prevenir</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SETA DIREITA -->
+                    <button class="carousel-arrow right-arrow" aria-label="Próximo">
+                        &#10095;
+                    </button>
+                </div>
+            </div>
+
+            <!-- Paginação do Carrossel (Pontos) -->
+            <div class="carousel-pagination">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <!-- Adicione mais pontos conforme o número de "slides" que você terá.
+                         Aqui estamos assumindo 3 grupos de cards, daí 3 pontos.
+                         Em uma implementação real, o JS adicionaria/removeria esses pontos dinamicamente. -->
+            </div>
+
+        </section>
+
+
+        <!-- NOVA SEÇÃO: FOOTER-->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column brand-column">
+                    <h3 class="footer-logo">NeuroTech</h3>
+
+                    <div class="social-icons">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:neurotech@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column links-column">
+                    <h4 class="footer-heading">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Notícias</a></li>
+                        <li><a href="#">Vídeos</a></li>
+                        <li><a href="#">Podcast</a></li>
+                        <li><a href="#">Ficha Técnica</a></li>
+                        <li><a href="#">Cibersegurança</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column contact-column">
+                    <h4 class="footer-heading">Contato</h4>
+                    <ul class="footer-contact">
+                        <li>Segunda - Sábado (8h - 17h)</li>
+                        <li>Domingo (9h - 16h)</li>
+                        <li> neurotech@gmail.com</li>
+                        <li> +55 (84) 91234-5678 </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column newsletter-column">
+                    <h4 class="footer-heading">Faça o login ou cadastre-se!</h4>
+                    <p class="footer-paragrafo">Fique por dentro de todas as novidades sobre o mundo da tecnologia na
+                        palma
+                        de sua mão!</p>
+                    <form action="#" class="newsletter-form">
+                        <input type="email" placeholder="Digite seu email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2024 NeuroTech. Todos os direitos reservados.</p>
+                </div>
+            </footer>
+
+            <!--FIM DO FOOTER-->
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            /* =========================
+               CARROSSEL COM SETAS
+            ========================= */
+
+            document.querySelectorAll(".testimonial-cards-wrapper").forEach(wrapper => {
+
+                const container = wrapper.closest(".carousel-container");
+                if (!container) return;
+
+                const leftBtn = container.querySelector(".left-arrow");
+                const rightBtn = container.querySelector(".right-arrow");
+
+                const card = wrapper.querySelector(".testimonial-card");
+                const cardStyle = getComputedStyle(card);
+
+                // 🔹 largura REAL de 1 card
+                const cardWidth =
+                    card.offsetWidth +
+                    parseInt(cardStyle.marginLeft) +
+                    parseInt(cardStyle.marginRight);
+
+                /* =========================
+                   ATUALIZA SETAS
+                ========================= */
+                function updateArrows() {
+                    const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+
+                    leftBtn.disabled = wrapper.scrollLeft <= 0;
+                    rightBtn.disabled = wrapper.scrollLeft >= maxScroll - 1;
+
+                    leftBtn.classList.toggle("disabled", leftBtn.disabled);
+                    rightBtn.classList.toggle("disabled", rightBtn.disabled);
+                }
+
+                /* =========================
+                   EVENTOS DAS SETAS
+                   (1 CARD POR VEZ)
+                ========================= */
+                leftBtn.addEventListener("click", () => {
+                    wrapper.scrollBy({ left: -cardWidth, behavior: "smooth" });
+                });
+
+                rightBtn.addEventListener("click", () => {
+                    wrapper.scrollBy({ left: cardWidth, behavior: "smooth" });
+                });
+
+                wrapper.addEventListener("scroll", updateArrows);
+                window.addEventListener("resize", updateArrows);
+
+                updateArrows();
+            });
+
+
+            /* =========================
+               PAGINAÇÃO (DOTS)
+            ========================= */
+
+            document.querySelectorAll(".testimonials-section").forEach(section => {
+
+                const wrapper = section.querySelector(".testimonial-cards-wrapper");
+                const dots = section.querySelectorAll(".carousel-pagination .dot");
+
+                if (!wrapper || dots.length === 0) return;
+
+                function updateDots() {
+                    const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+                    if (maxScroll <= 0) return;
+
+                    const segment = maxScroll / (dots.length - 1);
+                    const index = Math.round(wrapper.scrollLeft / segment);
+
+                    dots.forEach(dot => dot.classList.remove("active"));
+                    dots[Math.min(index, dots.length - 1)].classList.add("active");
+                }
+
+                wrapper.addEventListener("scroll", () => {
+                    requestAnimationFrame(updateDots);
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener("click", () => {
+                        const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+                        const target = (maxScroll / (dots.length - 1)) * index;
+
+                        wrapper.scrollTo({
+                            left: target,
+                            behavior: "smooth"
+                        });
+                    });
+                });
+
+                updateDots();
+            });
+
+        });
+
+        /* =========================
+           ATUALIZA AO RESIZE
+        ========================= */
+        window.addEventListener("resize", () => {
+            document.querySelectorAll(".testimonial-cards-wrapper")
+                .forEach(wrapper => wrapper.dispatchEvent(new Event("scroll")));
+        });
+
+    </script>
+</body>
+
+</html>
